@@ -12,6 +12,3 @@ ROLLBACK;
 SELECT class_id, capacity, enrolled, remaining
 FROM v_section_summary
 WHERE class_id = 'WEB-01';
-
-SELECT COUNT(*) AS total_enrollments
-FROM enrollments;
