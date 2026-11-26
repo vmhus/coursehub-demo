@@ -32,6 +32,11 @@ jobs:
         run: python -m pytest backend/tests -q
         env:
             PYTHONPATH: ${{ github.workspace }}
+            DB_HOST: 127.0.0.1
+            DB_PORT: "5432"
+            DB_NAME: coursehub_test
+            DB_USER: coursehub_test
+            DB_PASSWORD: test_password
 
   frontend:
     runs-on: ubuntu-latest
