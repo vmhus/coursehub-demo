@@ -29,7 +29,9 @@ jobs:
         run: python -m compileall backend
 
       - name: Test backend contract
-        run: pytest backend/tests -q
+        run: python -m pytest backend/tests -q
+        env:
+            PYTHONPATH: ${{ github.workspace }}
 
   frontend:
     runs-on: ubuntu-latest
